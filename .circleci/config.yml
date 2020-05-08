@@ -5,9 +5,6 @@ jobs:
     docker: # run the steps with Docker
       - image: circleci/node:8.17.0 
     steps:
-      - run:
-          name: Install Yarn 
-          command: 'sudo npm install -g yarn'
       - checkout
       - restore_cache:
           name: Restore Yarn Package Cache
