@@ -1,7 +1,7 @@
 version: 2.1
 jobs:
   build:
-    working_directory: ~/
+    working_directory: ~/weliveitapp
     docker: # run the steps with Docker
       - image: circleci/node:8.17.0 
     steps:
@@ -18,4 +18,4 @@ jobs:
           paths:
             - ~/.cache/yarn
       - run: # run build
-          command: npm build
+          command: yarn run build
